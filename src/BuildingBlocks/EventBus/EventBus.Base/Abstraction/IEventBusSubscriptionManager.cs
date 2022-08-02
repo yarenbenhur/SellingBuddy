@@ -17,8 +17,8 @@ namespace EventBus.Base.Abstraction
         bool HasSubscriptionForEvent(string eventName);
         Type GetEventTypeByName(string eventName);
         void Clear();
-        IEnumerable<SubscriptionInfo> GetHandlersForEvents<T>() where T : IntegrationEvent;
-        IEnumerable<SubscriptionInfo> GetHandlersForEvents(string eventName);
+        IEnumerable<SubscriptionInfo> GetHandlersForEvent<T>() where T : IntegrationEvent;
+        IEnumerable<SubscriptionInfo> GetHandlersForEvent(string eventName);
         string GetEventKey<T>(); // routing key 
 
 
